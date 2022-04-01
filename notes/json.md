@@ -19,7 +19,7 @@ JSON supports these types of data:
 
 Add `.json` at the end of a file name to create a JSON file
 
-// below is an object
+below is an object
 
 ```json
 {
