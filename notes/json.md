@@ -19,8 +19,9 @@ JSON supports these types of data:
 
 Add `.json` at the end of a file name to create a JSON file
 
+// below is an object
+
 ```json
-// an object
 {
     "name": "kyle",
     "favouriteNumber": 3,
@@ -30,15 +31,16 @@ Add `.json` at the end of a file name to create a JSON file
         "name": "Joey",
         "favouriteNumber": 100,
         "isProgrammer": false,
-        "friends": [...]
+        "friends": []
     }]
 }
 ```
 
 ### Practices
 
+below is an array of objects
+
 ```json
-// an array of objects
 [
     {
         "name": "Big Corporation",
