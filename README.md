@@ -1,6 +1,6 @@
 # Full Stack Open 2022
 
-Material: [FSO2022](https://fullstackopen.com/en/)
+Material: <a href="https://fullstackopen.com/en/" target="_blank">Full Stack Open 2022</a>
 
 Deep dive into modern web development.
 
