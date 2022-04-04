@@ -9,16 +9,38 @@ const App = () => {
   const [newNote, setNewNote] = useState("");
   const [showAll, setShowAll] = useState(true);
 
-  // useEffect
-  useEffect(() => {
+  // useEffect. by default will run after the componenet has been rendered
+  const hook = () => {
     console.log("effect");
-    axios.get("http://localhost:3001/notes").then((response) => {
-      console.log("promies fulfilled");
-      setNotes(response.data);
-    });
-  }, []);
-  console.log("render", notes.length, "notes");
+    axios
+      // .get returns a promise
+      .get("http://localhost:3001/notes")
+      // .then receive the promise and runs if its' fulfilled
+      .then((response) => {
+        console.log("promies fulfilled");
+        setNotes(response.data);
+      });
+  };
+  // if the second parameter is an empty array [], then the effect is only run along with the first render of the component.
+  useEffect(hook, []);
 
+  /*
+  the useEffect above also can be written in this way
+  useEffect(() => {
+    console.log('effect')
+
+    const eventHandler = response => {
+      console.log('promise fulfilled')
+      setNotes(response.data)
+    }
+
+    const promise = axios.get('https://localhost:3001/notes)
+    promise.then(eventHandler)
+  }, [])
+  */
+
+  console.log("render", notes.length, "notes");
+ 
   // the function to handle the onSubmit event of the form
   // event represents an event which takes place in the DOM
   // event will be triggered by the user action such as submit form, click button, and etc
